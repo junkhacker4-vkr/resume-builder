@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Resugeine – Resume Builder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background blobs -->
+  <div class="bg-circle bg-1"></div>
+  <div class="bg-circle bg-2"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="nav-left">
+        <div class="logo-mark">RG</div>
+        <div>
+          <div class="logo-title">ResuGeine</div>
+          <!-- 
+          <div class="logo-sub">AI-inspired resume builder</div>   
+          -->
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#builder">Resume Builder</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="btn ghost small">Log in</button>
+        <button class="btn primary small" id="navStart">Create my resume</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO (BetterCV style) -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Create a job-ready resume in <span>5 minutes</span>.</h1>
+        <p class="hero-sub">
+          Online resume builder with clean templates inspired by top sites like BetterCV.
+          No design skills needed – just fill, preview, and download as PDF.
+        </p>
+
+        <div class="hero-cta">
+          <button class="btn primary" id="heroStart">Start for free</button>
+          <button class="btn ghost" id="heroScrollHow">See how it works</button>
+        </div>
+
+        <div class="hero-badges">
+          <span class="pill">ATS-friendly layout</span>
+          <span class="pill">Student & fresher friendly</span>
+          <!-- <span class="pill">No login required</span> -->
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Templates possible*</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5 min</div>
+            <div class="stat-label">To first resume</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Free demo</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="hero-right"> -->
+        <!-- <div class="hero-preview"> -->
+          <!-- <div class="hero-preview-top"> -->
+            <!-- <div class="avatar-circle"></div>
+            <div>
+              <div class="hp-name"></div>
+              <div class="hp-role">Front-End Developer</div>
+            </div> -->
+          </div>
+          <!-- <div class="hero-preview-body">
+            <div class="hp-line long"></div>
+            <div class="hp-line mid"></div>
+            <div class="hp-line short"></div>
+
+            <div class="hp-cols">
+              <div> -->
+                <!-- <div class="hp-tag">Skills</div>
+                <div class="hp-chip-row">
+                  <span class="chip">HTML</span>
+                  <span class="chip">CSS</span>
+                  <span class="chip">JS</span>
+                </div> 
+              </div>
+              <div> -->
+                <!-- <div class="hp-tag">Experience</div>
+                <div class="hp-line tiny"></div>
+                <div class="hp-line tiny"></div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <p class="hero-note">Live builder with a modern two-column template below.</p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </section> -->
+
+  <!-- HOW IT WORKS (3 steps like BetterCV) -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-heading">
+        <h2>How BetterResume works</h2>
+        <p>Simple three-step flow, similar to popular resume builder sites.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Choose your details</h3>
+          <p>Fill your basic info, education, projects, and skills in our clean form.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Preview in real time</h3>
+          <p>See your resume update instantly in a two-column, ATS-friendly layout.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Download as PDF</h3>
+          <p>Use your browser print dialog to save your resume as a high-quality PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS CARDS -->
+  <section class="section light" id="benefits">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Why candidates love this builder</h2>
+        <p>Inspired by BetterCV style benefits, but fully custom implementation.</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Modern templates</h3>
+          <p>Clean fonts, clear hierarchy, and professional spacing that recruiters like.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>ATS-friendly</h3>
+          <p>Standard headings and structure so applicant-tracking systems can read it.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Pre-structured sections</h3>
+          <p>All important blocks – summary, education, experience, projects & skills.</p>
+        </div>
+        <div class="benefit-card">
+          <h3>Fresher-friendly</h3>
+          <p>Focus on projects and skills instead of long work history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME BUILDER FRAME -->
+  <section class="section builder-section" id="builder">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Build your resume</h2>
+        <p>Fill the form on the left, resume updates on the right.</p>
+      </div>
+
+      <div class="builder-frame">
+        <!-- LEFT: FORM -->
+        <section class="form-column">
+          <form id="cvForm" class="form-sections">
+            <!-- BASIC INFO -->
+            <div class="form-card">
+              <h3>Basic Info</h3>
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Ruchita Patel" required />
+              </div>
+              <div class="field">
+                <label for="headline">Headline / Role</label>
+                <input type="text" id="headline" placeholder="Front-End Developer | Fresher" />
+              </div>
+              <div class="field">
+                <label for="summary">Professional Summary</label>
+                <textarea id="summary" rows="3"
+                  placeholder="Write a 2–3 line summary about yourself..."></textarea>
+              </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="form-card">
+              <h3>Contact</h3>
+              <div class="field two">
+                <div>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" placeholder="+91-9876543210" />
+                </div>
+              </div>
+              <div class="field two">
+                <div>
+                  <label for="location">Location</label>
+                  <input type="text" id="location" placeholder="Varanasi, Uttar Pradesh" />
+                </div>
+                <div>
+                  <label for="linkedin">LinkedIn</label>
+                  <input type="text" id="linkedin" placeholder="linkedin.com/in/username" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="github">GitHub / Portfolio</label>
+                <input type="text" id="github" placeholder="github.com/username" />
+              </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="form-card">
+              <h3>Education</h3>
+              <div class="field">
+                <label for="eduDegree">Degree</label>
+                <input type="text" id="eduDegree" placeholder="Diploma in Computer Science" />
+              </div>
+              <div class="field">
+                <label for="eduCollege">College / Institute</label>
+                <input type="text" id="eduCollege" placeholder="ABC Institute of Technology" />
+              </div>
+              <div class="field two">
+                <div>
+                  <label for="eduStart">Start Year</label>
+                  <input type="text" id="eduStart" placeholder="2022" />
+                </div>
+                <div>
+                  <label for="eduEnd">End Year</label>
+                  <input type="text" id="eduEnd" placeholder="2025" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="eduDetails">Details (optional)</label>
+                <textarea id="eduDetails" rows="2"
+                  placeholder="Percentage, CGPA, highlights..."></textarea>
+              </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="form-card">
+              <h3>Experience / Training</h3>
+              <div class="field">
+                <label for="expRole">Role</label>
+                <input type="text" id="expRole" placeholder="Web Development Intern" />
+              </div>
+              <div class="field">
+                <label for="expCompany">Company</label>
+                <input type="text" id="expCompany" placeholder="ABC Pvt. Ltd." />
+              </div>
+              <div class="field two">
+                <div>
+                  <label for="expStart">Start</label>
+                  <input type="text" id="expStart" placeholder="Jan 2024" />
+                </div>
+                <div>
+                  <label for="expEnd">End</label>
+                  <input type="text" id="expEnd" placeholder="Mar 2024" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="expDetails">Work Details (one per line)</label>
+                <textarea id="expDetails" rows="3" placeholder="- Built responsive pages
+- Fixed UI bugs
+- Learned Git & GitHub"></textarea>
+              </div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class="form-card">
+              <h3>Projects</h3>
+              <div class="field">
+                <label for="projName">Project Title</label>
+                <input type="text" id="projName" placeholder="Online Resume Builder Website" />
+              </div>
+              <div class="field">
+                <label for="projTech">Tech Stack</label>
+                <input type="text" id="projTech" placeholder="HTML, CSS, JavaScript" />
+              </div>
+              <div class="field">
+                <label for="projDetails">Project Description</label>
+                <textarea id="projDetails" rows="3"
+                  placeholder="Short description of what the project does..."></textarea>
+              </div>
+            </div>
+
+            <!-- SKILLS & ACHIEVEMENTS -->
+            <div class="form-card">
+              <h3>Skills & Achievements</h3>
+              <div class="field">
+                <label for="skills">Skills (comma or new line)</label>
+                <textarea id="skills" rows="2"
+                  placeholder="HTML, CSS, JavaScript, C, DBMS"></textarea>
+              </div>
+              <div class="field">
+                <label for="achievements">Achievements (one per line)</label>
+                <textarea id="achievements" rows="3" placeholder="Certificate in Web Development
+Hackathon participation
+College Topper in 2nd year"></textarea>
+              </div>
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="form-actions">
+              <button type="button" id="generateBtn" class="btn primary">Generate Resume</button>
+              <button type="button" id="clearBtn" class="btn ghost">Clear</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- RIGHT: PREVIEW -->
+        <section class="preview-column">
+          <div class="preview-wrapper">
+            <div id="cv-preview" class="cv-page">
+              <div class="cv-header">
+                <div class="cv-name-block">
+                  <h2 id="cv-fullname">Your Name</h2>
+                  <p id="cv-headline">Your Role / Headline</p>
+                </div>
+              </div>
+
+              <div class="cv-body">
+                <!-- LEFT SIDEBAR -->
+                <aside class="cv-left">
+                  <section class="cv-section">
+                    <h3>Contact</h3>
+                    <p id="cv-email"></p>
+                    <p id="cv-phone"></p>
+                    <p id="cv-location"></p>
+                    <p id="cv-linkedin"></p>
+                    <p id="cv-github"></p>
+                  </section>
+
+                  <section class="cv-section">
+                    <h3>Skills</h3>
+                    <ul id="cv-skills"></ul>
+                  </section>
+
+                  <section class="cv-section">
+                    <h3>Achievements</h3>
+                    <ul id="cv-achievements"></ul>
+                  </section>
+                </aside>
+
+                <!-- RIGHT MAIN -->
+                <div class="cv-right">
+                  <section class="cv-section">
+                    <h3>Profile</h3>
+                    <p id="cv-summary"></p>
+                  </section>
+
+                  <section class="cv-section">
+                    <h3>Education</h3>
+                    <div id="cv-education"></div>
+                  </section>
+
+                  <section class="cv-section">
+                    <h3>Experience</h3>
+                    <div id="cv-experience"></div>
+                  </section>
+
+                  <section class="cv-section">
+                    <h3>Projects</h3>
+                    <div id="cv-projects"></div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="preview-hint">Print button (Ctrl+P) → Save as PDF.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-heading">
+        <h2>FAQ</h2>
+        <p>Quick answers about this resume builder.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Is this free?</h3>
+          <p>Yes, this project runs completely in your browser. No backend, no payment.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is it a copy of BetterCV?</h3>
+          <p>No – design is only inspired by those sites. Layout and code are written from scratch.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I edit the template?</h3>
+          <p>Yes, just edit the HTML/CSS to change colors, fonts, or sections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 BetterResume Demo – Front-end project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
