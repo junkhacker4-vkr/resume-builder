@@ -128,3 +128,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const img = document.getElementById("cv-photo");
   if (img) img.style.display = "none";
 });
+// --- small helper: scroll to the builder section when hero/nav buttons are clicked ---
+function scrollToBuilder() {
+  const el = document.getElementById("builder");
+  if (!el) return;
+  el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+// Add listeners for header/nav and hero CTA buttons (safe checks)
+document.addEventListener("DOMContentLoaded", function () {
+  const navStart = document.getElementById("navStart");      // header button
+  const heroStart = document.getElementById("heroStart2");  // hero CTA
+
+  if (navStart) navStart.addEventListener("click", scrollToBuilder);
+  if (heroStart) heroStart.addEventListener("click", scrollToBuilder);
+});
+
